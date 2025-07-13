@@ -33,4 +33,21 @@ router.delete('/:id', async(req,res)=> {
     }
 });
 
+// PUT update appointment
+router.put('/:id', async (req, res) => {
+  const { name, date, reason } = req.body;
+  try {
+    const updated = await Appointment.findByIdAndUpdate(
+      req.params.id,
+      { name, date, reason },
+      { new: true }
+    );
+    res.json(updated);
+  } catch (err) {
+    res.status(400).json({ error: 'Failed to update' });
+  }
+});
+
+
+
 module.exports = router;
