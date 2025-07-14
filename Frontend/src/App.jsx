@@ -3,7 +3,7 @@ import axios from 'axios';
 import AppointmentForm from './components/AppointmentForm.jsx';
 import AppointmentList from './components/AppointmentList.jsx';
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // You missed this import
+import 'react-toastify/dist/ReactToastify.css'; 
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
